@@ -7,6 +7,7 @@ dotenv.config();
 const app = express();
 
 import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
@@ -28,6 +29,7 @@ mongoose
   });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
 
 app.use("/", (req, res) => {
   res.send("Welcome to the API");
