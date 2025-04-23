@@ -27,9 +27,8 @@ mongoose
     process.exit(1);
   });
 
+app.use("/api/auth", authRoutes);
+
 app.use("/", (req, res) => {
   res.send("Welcome to the API");
 });
-
-
-app.use("/api/auth", authRoutes);
