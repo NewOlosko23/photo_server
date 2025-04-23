@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   subscriptionDate: { type: Date },
   subscriptionType: {
     type: String,
-    enum: ["basic", "standard", "premium"],
+    enum: ["basic", "standard", "premium", "trial"],
     default: "basic",
   },
 });
